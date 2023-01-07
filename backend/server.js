@@ -17,7 +17,7 @@ app.use(cors({
 
 
 
-app.use("/register", register);
+app.use("/register", register, res.header("Access-Control-Allow-Origin", "*"));
 app.use("/login", login);
 
 
