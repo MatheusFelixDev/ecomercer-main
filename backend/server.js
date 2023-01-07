@@ -13,8 +13,8 @@ require("dotenv").config()
 app.use(express.json());
 app.use(cors());
 
-app.use("/api/register", register);
-app.use("/api/login", login);
+app.use("/register", register);
+app.use("/login", login);
 
 
 app.get("/", (req, res) => {
