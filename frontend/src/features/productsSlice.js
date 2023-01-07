@@ -11,7 +11,7 @@ export const productsFetch = createAsyncThunk(
     "products/productsFetch",
     async(id=null, { rejectWithValue}) => {
        
-            const response = await axios.get("https://ecomercer-main.vercel.app/")
+            const response = await axios.get("https://ecomercer-main.vercel.app")
             return response?.data;
         
     }
