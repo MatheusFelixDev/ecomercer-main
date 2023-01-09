@@ -14,6 +14,7 @@ app.use(express.json());
 
 app.use((req, res, next) =>{
   res.header("Access-Control-Allow-Origin", "https://ecomercer-main-front.vercel.app");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
   app.use(cors());
   next();
 });
