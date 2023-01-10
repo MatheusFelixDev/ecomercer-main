@@ -3,23 +3,21 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const register = require("./routes/register");
 const login = require("./routes/login");
-
 const products = require("./products");
-
 const app = express();
+app.use(cors());
 
 require("dotenv").config()
 
 app.use(express.json());
 
-app.use((req, res, next) => {
-  console.log("Adding Access-Control-Allow-Origin header");
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  next();
-});
+//app.use((req, res,) => {
+//  console.log("Adding Access-Control-Allow-Origin header");
+//  res.setHeader("Access-Control-Allow-Origin", "*");
+//});
 
 
-app.use(cors());
+
 
 app.use("/api/register", register);
 app.use("/api/login", login);
