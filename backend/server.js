@@ -32,8 +32,6 @@ app.get("/products", (req, res) => {
 
 
 
-
-
 const uri = process.env.DB_URI
 const port = process.env.PORT || 5000
 
