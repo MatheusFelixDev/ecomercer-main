@@ -10,6 +10,6 @@
     "routes": [
         { "src": "/api/.*", "dest": "server.js"},
         { "src": "/.*", "dest": "server.js"},
-        { "src": "/routes/.*", "dest": "server.js"}
+        { "src": "/routes/.*", "dest": "login.js"}
       ]
   }
