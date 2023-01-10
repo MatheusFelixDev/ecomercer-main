@@ -22,7 +22,10 @@ app.use((req, res, next) => {
 app.use(cors());
 
 app.use("/api/register", register);
-app.use("/api/login", login);
+app.use("/api/login", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  // resto da rota aqui
+});
 
 app.get("/", (req, res) => {
     res.send("Welcome to our online shop API..."); 
