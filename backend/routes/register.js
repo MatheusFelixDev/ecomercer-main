@@ -7,6 +7,8 @@ const generateAuthToken = require("../utils/generateAuthToken");
 const router = express.Router()
 
 router.post("/", async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://ecomercer-main-front.vercel.app");
+
     const schema = Joi.object({
         name: Joi.string().min(3).max(30).required(),
         email: Joi.string().min(3).max(200).required().email(),
