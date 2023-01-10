@@ -24,6 +24,8 @@ app.use(cors());
 app.use("/api/register", register);
 app.use("/api/login", login);
 
+
+
 app.get("/", (req, res) => {
     res.send("Welcome to our online shop API..."); 
 });

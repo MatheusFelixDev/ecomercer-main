@@ -32,4 +32,8 @@ router.post("/", async (req, res) => {
   res.send(token);
 });
 
+router.get("/", (req, res) => {
+  res.send("Welcome to our online shop API..."); 
+});
+
 module.exports = router;
