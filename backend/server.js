@@ -19,11 +19,7 @@ app.use((req, res, next) => {
 });
 
 
-app.use(
-  cors({
-    origin: ["https://ecomercer-main-front.vercel.app"]
-  })
-);
+app.use(cors());
 
 app.use("/api/register", register);
 app.use("/api/login", login);
