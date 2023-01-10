@@ -5,13 +5,16 @@ const express = require("express");
 const generateAuthToken = require("../utils/generateAuthToken");
 const router = express.Router();
 
-app.use((req, res, next) => {
-  console.log("Adding Access-Control-Allow-Origin header");
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  next();
-});
+
 
 router.post("/", async (req, res) => {
+  app.use((req, res, next) => {
+    console.log("Adding Access-Control-Allow-Origin header");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+  });
+
+
   const schema = Joi.object({
     email: Joi.string().min(3).max(200).required().email(),
     password: Joi.string().min(6).max(200).required(),
