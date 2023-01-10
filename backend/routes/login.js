@@ -8,7 +8,7 @@ const router = express.Router();
 
 
 router.post("/", async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://ecomercer-main-front.vercel.app");
+  res.setHeader("Access-Control-Allow-Origin", "https://ecomercer-main-front.vercel.app/api/login");
 
 
   const schema = Joi.object({
