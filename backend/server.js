@@ -42,7 +42,7 @@ app.listen(port, console.log(`Server running on port ${port}`));
 
 mongoose.set("strictQuery", true);
 mongoose
-  .connect(uri, {
+  .connect(openUrl(url), {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
