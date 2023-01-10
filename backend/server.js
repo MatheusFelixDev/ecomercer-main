@@ -13,6 +13,7 @@ require("dotenv").config()
 app.use(express.json());
 
 app.use((req, res, next) => {
+  console.log("Adding Access-Control-Allow-Origin header");
   res.setHeader("Access-Control-Allow-Origin", "*");
   next();
 });
