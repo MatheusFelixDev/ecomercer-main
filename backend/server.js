@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://ecomercer-main-front.vercel.app"
+    origin: ["https://ecomercer-main-front.vercel.app"]
   })
 );
 
