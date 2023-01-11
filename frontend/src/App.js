@@ -10,6 +10,7 @@ import Home from './components/Home';
 import NotFound from './components/NotFound';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
+import CheckoutSuccess from './components/checkoutSuccess';
 
 function App() {
   return (
@@ -21,9 +22,10 @@ function App() {
 
             <Route path='/'  exact element={<Home/>}/>
             <Route path='/cart' exact element={<Cart/>}/>
+            <Route path='/checkout-success'  element={<CheckoutSuccess/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route path='/not-found' element={<NotFound/>}/>
+            <Route path='*' element={<NotFound/>}/>
             
             
           </Routes>
