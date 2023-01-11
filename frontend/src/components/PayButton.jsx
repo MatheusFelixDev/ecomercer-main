@@ -8,9 +8,9 @@ const PayButton = ({cartItems}) => {
     const handleCheckout = () => {
         console.log(cartItems)
         axios
-            .post(`${url}/stripe/create-checkout-success`,{
+            .post(`${url}/stripe/create-checkout-session`,{
                 cartItems,
-                userID: user._id,
+                userId: user._id,
             })
             .then((res) => {
                 if (res.data.url){
