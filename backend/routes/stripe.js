@@ -13,7 +13,7 @@ router.post('/create-checkout-session', async (req, res) =>{
     const line_items = req.body.cartItems.map((item) => {
         return{
             price_data: {
-                currency: 'usd',
+                currency: 'BLR',
                 product_data: {
                     name: item.name,
                     images: [item.image],
@@ -41,7 +41,7 @@ router.post('/create-checkout-session', async (req, res) =>{
                     type: 'fixed_amount',
                     fixed_amount: {
                         amount: 0,
-                        currency: 'usd'
+                        currency: 'BLR'
                     },
                     display_name: 'Free shipping',
                     delivery_estimate: {
@@ -61,7 +61,7 @@ router.post('/create-checkout-session', async (req, res) =>{
                     type: "fixed_amount",
                     fixed_amount:{
                         amount:1500,
-                        currency:'usd',
+                        currency:'BLR',
                     },
                     display_name: 'Next day air',
 
