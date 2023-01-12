@@ -26,12 +26,11 @@ router.post('/create-checkout-session', async (req, res) =>{
         success_url: `${process.env.CLIENT_URL}/checkout-success`,
         cancel_url: `${process.env.CLIENT_URL}/cart`,
     });
-
-    router.get("/create-checkout-session", (req, res) => {
-        res.send("Welcome to our online shop API..."); 
-      });
-
     res.send({url: session.url});
 });
+
+router.get("/create-checkout-session", (req, res) => {
+    res.send("Welcome to our online shop API..."); 
+  });
 
 module.exports = router;
