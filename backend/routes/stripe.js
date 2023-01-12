@@ -29,8 +29,5 @@ router.post('/create-checkout-session', async (req, res) =>{
     res.send({url: session.url});
 });
 
-router.get("/create-checkout-session", (req, res) => {
-    res.send("Welcome to our online shop API..."); 
-  });
 
 module.exports = router;
