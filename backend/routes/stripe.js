@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post('/create-checkout-session', async (req, res) =>{
     res.setHeader("Access-Control-Allow-Origin", "*");
-    const session = await stripe.checkout.session.create({
+    const session = await stripe.checkout.sessions.create({
         line_items: [
             {
                 price_data: {
