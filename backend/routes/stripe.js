@@ -9,6 +9,7 @@ const stripe = Stripe(process.env.STRIPE_KEY);
 const router = express.Router();
 
 router.post("/create-checkout-session", async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://ecomercer-main-front.vercel.app");
   const customer = await stripe.customers.create({
     metadata: {
       userId: req.body.userId,
