@@ -10,7 +10,7 @@ import Home from './components/Home';
 import NotFound from './components/NotFound';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import CheckoutSuccess from './components/CheckoutSuccess';
+import CheckoutSuccess from './components/checkoutSuccess';
 import Dashboard from './components/admin/Dashboard';
 import Products from './components/admin/Products';
 import Summary from './components/admin/Summary';
