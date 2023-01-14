@@ -7,6 +7,7 @@ const router = require("express").Router();
 //CREATE
 
 router.post("/", isAdmin, async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
   const { name, brand, desc, price, image } = req.body;
 
   try {

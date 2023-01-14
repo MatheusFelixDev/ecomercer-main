@@ -9,6 +9,7 @@ const router = require("express").Router();
 // example endpoint
 
 router.post("/", auth, async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
   const newOrder = new Order(req.body);
 
   try {
