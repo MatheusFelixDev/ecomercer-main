@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+
 import styled from "styled-components";
 import { PrimaryButton } from "./CommonStyled";
 import { productsCreate } from "../../features/productsSlice";

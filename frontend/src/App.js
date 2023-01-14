@@ -12,7 +12,7 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { loadUser } from "./slices/authSlice";
+import { loadUser } from "./features/authSlice";
 import CheckoutSuccess from "./components/checkoutSuccess";
 import Dashboard from "./components/admin/Dashboard";
 import Products from "./components/admin/Products";
