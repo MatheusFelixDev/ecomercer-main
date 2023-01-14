@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const register = require("./routes/register");
+const orders = require("./routes/orders");
 const login = require("./routes/login");
 const stripe = require("./routes/stripe");
 const productsRoute = require("./routes/products");
@@ -22,6 +23,7 @@ app.use(express.json());
 
 app.use("/api/register", register);
 app.use("/api/login", login);
+app.use("/api/orders", orders);
 app.use("/api/stripe", stripe);
 app.use("api/products", productsRoute);
 
